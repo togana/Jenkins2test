@@ -1,0 +1,23 @@
+{
+  "name": "jenkins2test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "express-generator": "^4.13.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/togana/Jenkins2test.git"
+  },
+  "author": "togana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/togana/Jenkins2test/issues"
+  },
+  "homepage": "https://github.com/togana/Jenkins2test#readme"
+}
