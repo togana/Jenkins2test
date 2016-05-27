@@ -3,7 +3,7 @@ node('node') {
   currentBuild.result = "SUCCESS"
   try {
     stage 'Checkout'
-      checkout deploy
+      checkout scm
     stage 'Test'
       sh 'docker-machine create  -d virtualbox test-jenkins2test'
       sh 'docker-machine regenerate-certs test-jenkins2test'
