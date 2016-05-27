@@ -7,9 +7,10 @@ node {
     stage 'Test'
       sh 'docker-machine create -d virtualbox test-jenkins2test'
       sh 'docker-machine regenerate-certs -f test-jenkins2test'
-      sh 'eval $(docker-machine env test-jenkins2test)'
-      sh 'docker-compose build'
-      sh 'docker-compose run --rm app npm test'
+      sh '
+        eval $(docker-machine env test-jenkins2test) && \
+        docker-compose build && \
+        docker-compose run --rm app npm test'
 
     stage 'Deploy'
       echo 'ssh to web server and build, up'
