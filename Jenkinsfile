@@ -1,4 +1,4 @@
-node('node') {
+node {
   def err = null
   currentBuild.result = "SUCCESS"
   try {
@@ -11,8 +11,6 @@ node('node') {
 
     stage 'Cleanup'
       echo 'prune and cleanup'
-      sh 'npm prune'
-      sh 'rm -rf node_modules'
   }
   catch (caughtError) {
     err = caughtError
